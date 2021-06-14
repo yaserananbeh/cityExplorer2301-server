@@ -1,16 +1,20 @@
-const express = require('express') // require the express package
-const app = express() // initialize your express app instance
+const express = require('express')
+const app = express()
  
 const cors = require('cors');
 
-app.use(cors()) // after you initialize your express app instance
-
+app.use(cors())
+const weatherData=require('./data/weather.json');
 require('dotenv').config();
 const PORT=process.env.PORT
-// a server endpoint 
-app.get('/', // our endpoint name
- function (req, res) { // callback function of what we should do with our request
-  res.send('Hello World') // our endpoint function response
+app.get('/', 
+ function (req, res) { 
+  res.send('Hello World') 
 })
- 
-app.listen(PORT) // kick start the express server to work
+app.get('/weather', 
+function (req, res) { 
+
+ res.send(weatherData) 
+//  console.log(next)
+})
+app.listen(PORT) 
