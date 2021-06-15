@@ -37,9 +37,9 @@ Estimate of time needed to complete: 2hour
 
 Start time: 4:30
 
-Finish time: 
+Finish time: 7:00
 
-Actual time needed to complete: 
+Actual time needed to complete: 2:30
 
 
 Name of feature: 3. Errors (revisited): As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
@@ -47,6 +47,17 @@ Name of feature: 3. Errors (revisited): As a user, I want clear messages if some
 Estimate of time needed to complete: 2hour
 
 Start time: 7:00
+
+Finish time: 9:00
+
+Actual time needed to complete: 2:00
+
+
+Name of feature: 4. Weather (live): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
+
+Estimate of time needed to complete: 2hour
+
+Start time: 7:30
 
 Finish time: 
 
