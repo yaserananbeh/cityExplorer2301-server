@@ -59,9 +59,20 @@ Estimate of time needed to complete: 2hour
 
 Start time: 7:30
 
-Finish time: 
+Finish time: 10:00
 
-Actual time needed to complete: 
+Actual time needed to complete: 2:30
+
+
+Name of feature: 5. Movies: As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination.
+
+Estimate of time needed to complete: 2hour
+
+Start time: 2:30
+
+Finish time: 4:00
+
+Actual time needed to complete: 1:30
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

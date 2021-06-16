@@ -9,21 +9,14 @@ require('dotenv').config();
 const PORT = process.env.PORT
 const weatherBitKey = process.env.WEATHER_API_KEY;
 console.log(weatherBitKey)
+const MOVIE_API_KEY = process.env.MOVIE_API_KEY;
+console.log(MOVIE_API_KEY)
 
 app.get('/',
   function (req, res) {
     res.send('Hello World')
   })
 
-// app.get('/weather', 
-// function (req, res) { 
-//   const theNewData=weatherData.data.map(value=>{
-//     let editedData=new Weather(value);
-//     // console.log(editedData);
-//     return editedData;
-//   });
-//   res.send(theNewData);
-// })
 app.get('/weather', (req, res) => {
   const lat = req.query.lat;
   const lon = req.query.lon;
@@ -41,6 +34,34 @@ app.get('/weather', (req, res) => {
     res.send('please provide the proper lat and lon')
 }
 })
+app.get('/movie',(req,res)=>{
+  const region =req.query.region.slice(0,2);
+  console.log(region)
+  if(region){
+    const movieUrl=`https://api.themoviedb.org/3/discover/movie?api_key=${MOVIE_API_KEY}&region=${region}`
+    axios.get(movieUrl).then((response)=>{
+      const shapedData=response.data.results.map((obj)=>new Movie(obj))
+      res.json(shapedData);
+    }).catch((error)=>{
+      res.send(error.message)
+    });
+  }
+  else{
+    res.send('please provide region as search query')
+  }
+
+})
+class Movie{
+  constructor(obj){
+    this.title=obj.title;
+    this.overview=obj.overview;
+    this.average_votes=obj.vote_average;
+    this.total_votes=obj.vote_count;
+    this.image_url=`https://image.tmdb.org/t/p/w500/${obj.backdrop_path}`;
+    this.popularity=obj.popularity;
+    this.released_on=obj.release_date;
+  }
+}
 class Weather {
   constructor(obj) {
     this.description = obj.weather.description
