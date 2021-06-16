@@ -74,6 +74,29 @@ Finish time: 4:00
 
 Actual time needed to complete: 1:30
 
+
+Name of feature: 6.Refactor: Modularize the back-end codebase.
+
+Estimate of time needed to complete: 1hour
+
+Start time: 9:00
+
+Finish time: 9:30
+
+Actual time needed to complete: 30min
+
+
+
+Name of feature: 7. Refactor: Componentize the front-end codebase.
+
+Estimate of time needed to complete: 1hour
+
+Start time: 9:30
+
+Finish time: 10:00
+
+Actual time needed to complete: 30min
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
