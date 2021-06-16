@@ -35,9 +35,9 @@ app.get('/weather', (req, res) => {
 }
 })
 app.get('/movie',(req,res)=>{
-  const region =req.query.region.slice(0,2);
-  console.log(region)
+  let region =req.query.region;
   if(region){
+    region=region.slice(0,2);
     const movieUrl=`https://api.themoviedb.org/3/discover/movie?api_key=${MOVIE_API_KEY}&region=${region}`
     axios.get(movieUrl).then((response)=>{
       const shapedData=response.data.results.map((obj)=>new Movie(obj))
