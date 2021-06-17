@@ -97,6 +97,17 @@ Finish time: 10:00
 
 Actual time needed to complete: 30min
 
+
+Name of feature: 8: Performance: As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.
+
+Estimate of time needed to complete: 1:30hour
+
+Start time: 12:00
+
+Finish time: 12:40
+
+Actual time needed to complete: 40min
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
